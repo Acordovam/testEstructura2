@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Git con GitHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Ejemplos de Git con GitHub</h1>
+    </header>
+    <main>
+        <section id="intro">
+            <div class="intro-text">
+                <h2>¿Qué es Git?</h2>
+                <p>Git es un sistema de control de versiones distribuido que permite a los desarrolladores rastrear cambios en el código, colaborar con otros y mantener un historial detallado del proyecto.</p>
+            </div>
+            <div class="intro-text">
+                <h2>¿Qué es GitHub?</h2>
+                <p>GitHub es una plataforma de alojamiento de código basada en la web que utiliza Git. Facilita la colaboración entre desarrolladores, proporcionando herramientas para la revisión de código, la gestión de proyectos y la integración continua.</p>
+            </div>
+        </section>
+        <section id="examples">
+            <div class="example" id="clone">
+                <h2>Clonar un repositorio</h2>
+                <pre><code>git clone https://github.com/usuario/repositorio.git</code></pre>
+                <button onclick="showDetails('clone-details')">Más detalles</button>
+                <p id="clone-details" class="details">
+                    Este comando clona un repositorio existente desde GitHub a tu máquina local. 
+                    <br><br>
+                    <strong>Proceso:</strong>
+                    <ol>
+                        <li>Se copia todo el historial del repositorio.</li>
+                        <li>Se crea una nueva carpeta con el contenido del repositorio.</li>
+                        <li>Te permite trabajar en el proyecto localmente.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="example" id="commit">
+                <h2>Hacer un commit</h2>
+                <pre><code>git commit -m "Mensaje del commit"</code></pre>
+                <button onclick="showDetails('commit-details')">Más detalles</button>
+                <p id="commit-details" class="details">
+                    Este comando guarda los cambios en el repositorio local con un mensaje descriptivo.
+                    <br><br>
+                    <strong>Proceso:</strong>
+                    <ol>
+                        <li>Los cambios en el Staging Area se agrupan en un commit.</li>
+                        <li>El commit se registra en el repositorio local con un identificador único.</li>
+                        <li>Se añade un mensaje que describe los cambios realizados.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="example" id="push">
+                <h2>Enviar cambios a GitHub</h2>
+                <pre><code>git push origin main</code></pre>
+                <button onclick="showDetails('push-details')">Más detalles</button>
+                <p id="push-details" class="details">
+                    Este comando envía los commits del repositorio local al repositorio remoto en GitHub.
+                    <br><br>
+                    <strong>Proceso:</strong>
+                    <ol>
+                        <li>Los commits locales se transfieren al servidor remoto.</li>
+                        <li>El repositorio remoto se actualiza con los últimos cambios.</li>
+                        <li>Otros colaboradores pueden ver y trabajar con los cambios enviados.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="example" id="pull">
+                <h2>Actualizar repositorio local</h2>
+                <pre><code>git pull origin main</code></pre>
+                <button onclick="showDetails('pull-details')">Más detalles</button>
+                <p id="pull-details" class="details">
+                    Este comando actualiza tu repositorio local con los cambios más recientes del repositorio remoto.
+                    <br><br>
+                    <strong>Proceso:</strong>
+                    <ol>
+                        <li>Se descargan los cambios más recientes del servidor remoto.</li>
+                        <li>Se fusionan esos cambios con el repositorio local.</li>
+                        <li>Tu repositorio local queda sincronizado con el remoto.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="example" id="branch">
+                <h2>Crear una nueva rama</h2>
+                <pre><code>git branch nombre-rama</code></pre>
+                <button onclick="showDetails('branch-details')">Más detalles</button>
+                <p id="branch-details" class="details">
+                    Este comando crea una nueva rama en el repositorio local.
+                    <br><br>
+                    <strong>Proceso:</strong>
+                    <ol>
+                        <li>Se crea un nuevo puntero que se puede mover independientemente del main.</li>
+                        <li>Permite trabajar en nuevas funcionalidades sin afectar la rama principal.</li>
+                        <li>Es útil para desarrollar características de manera aislada.</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="example" id="merge">
+                <h2>Fusionar ramas</h2>
+                <pre><code>git merge nombre-rama</code></pre>
+                <button onclick="showDetails('merge-details')">Más detalles</button>
+                <p id="merge-details" class="details">
+                    Este comando fusiona la rama especificada con la rama actual.
+                    <br><br>
+                    <strong>Proceso:</strong>
+                    <ol>
+                        <li>Los cambios de la rama especificada se integran en la rama actual.</li>
+                        <li>Se resuelven posibles conflictos que puedan surgir.</li>
+                        <li>La rama actual se actualiza con los cambios fusionados.</li>
+                    </ol>
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p> Estructura de Datos</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+git remote add origin https://github.com/Acordovam/testEstructura2.git
+git branch -M main
+git push -u origin main
